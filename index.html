@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email</title>
+    <link href="https://fonts.googleapis.com/css?family=DM Sans" rel="stylesheet" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    
+    <style>
+html,
+body {
+  padding: 0px;
+  margin: 0;
+}
+/* Light mode */
+        @media (prefers-color-scheme: light) {
+            .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 116px;
+  background: #143e48;
+  border-radius: 20px 20px 0px 0px;
+}
+.top-container {
+  width: 100%;
+  height: 306px;
+  display: flex;
+  align-items: center;
+  background: #e3fbea;
+      border-bottom: 1px solid white;
+}
+.left-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-small {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+
+  letter-spacing: -0.02em;
+
+  color: #363a57;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.text-medium,
+.text-large {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 49.4285px;
+  line-height: 120%;
+  /* or 59px */
+
+  letter-spacing: -0.02em;
+
+  color: #363a57;
+  margin: 0px;
+}
+.text-large {
+  color: #6db18a;
+}
+.middle-container {
+  padding: 24px 32px 32px 32px;
+  /* width: calc(100vw - 64px); */
+  /* background: #E3FBEA; */
+}
+.text-1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  /* identical to box height, or 39px */
+
+  /* Dark */
+
+  color: #143e48;
+  margin: 0;
+}
+.text-2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  /* identical to box height, or 22px */
+
+  color: #6db18a;
+  margin: 16px 0px;
+}
+.text-3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  /* Paragraph */
+
+  color: #333333;
+  margin: 0px 0px;
+}
+.mid-inner-container {
+  margin: 24px 0px;
+}
+.text-4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  /* identical to box height, or 22px */
+
+  /* Dark */
+
+  color: #143e48;
+  margin: 0px 0px 28px 0px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 16px;
+}
+.text-5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0px;
+  color: #000000;
+}
+.separator {
+  width: 100%;
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-1 {
+  width: 408px;
+  height: 56px;
+  background: #143e48;
+  border-radius: 10px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin-top: 48px;
+  cursor: pointer;
+}
+.footer {
+  width: calc(100% - 48px);
+  height: calc(190px - 48px);
+
+  background: #143e48;
+  border-radius: 0px 0px 12px 12px;
+  padding: 24px;
+}
+.text-6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  text-align: center;
+
+  color: #e3fbea;
+  margin: 0px;
+}
+.icon-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 10px 0px 10px 0px;
+}
+.icon {
+  cursor: pointer;
+}
+.text-7,
+.text-8 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  /* or 19px */
+
+  text-align: center;
+
+  color: #e3fbea;
+  margin: 0px;
+}
+.text-7 {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .right-container {
+    display: none;
+  }
+  .left-container {
+    width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .middle-container {
+    padding: 24px 20px 32px 20px;
+    /* width: calc(100vw - 40px); */
+  }
+}
+        }
+        /**************************************************************************************************************************************************************/
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 116px;
+  background: #143e48;
+  border-radius: 20px 20px 0px 0px;
+}
+.top-container {
+  width: 100%;
+  height: 306px;
+  display: flex;
+  align-items: center;
+  background: #000000;
+      border-bottom: 1px solid white;
+}
+.left-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-small {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+
+  letter-spacing: -0.02em;
+
+  color: #d3d9ff;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.text-medium,
+.text-large {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 49.4285px;
+  line-height: 120%;
+  /* or 59px */
+
+  letter-spacing: -0.02em;
+
+  color: #d3d9ff;
+  margin: 0px;
+}
+.text-large {
+  color: #6db18a;
+}
+.middle-container {
+  padding: 24px 32px 32px 32px;
+  /* width: calc(100vw - 64px); */
+  background: #000000;
+}
+.text-1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  /* identical to box height, or 39px */
+
+  /* Dark */
+
+  color: #dbd5d5;
+  margin: 0;
+}
+.text-2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  /* identical to box height, or 22px */
+
+  color: #6db18a;
+  margin: 16px 0px;
+}
+.text-3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  /* Paragraph */
+
+  color: #dbd5d5;
+  margin: 0px 0px;
+}
+.mid-inner-container {
+  margin: 24px 0px;
+}
+.text-4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  /* identical to box height, or 22px */
+
+  /* Dark */
+
+  color: #dbd5d5;
+  margin: 0px 0px 28px 0px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 16px;
+}
+.text-5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0px;
+  color: #dbd5d5;
+}
+.separator {
+  width: 100%;
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-1 {
+  width: 408px;
+  height: 56px;
+  background: #143e48;
+  border-radius: 10px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin-top: 48px;
+  cursor: pointer;
+}
+.footer {
+  width: calc(100% - 48px);
+  height: calc(190px - 48px);
+
+  background: #143e48;
+  border-radius: 0px 0px 12px 12px;
+  padding: 24px;
+}
+.text-6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  text-align: center;
+
+  color: #e3fbea;
+  margin: 0px;
+}
+.icon-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 10px 0px 10px 0px;
+}
+.icon {
+  cursor: pointer;
+}
+.text-7,
+.text-8 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  /* or 19px */
+
+  text-align: center;
+
+  color: #e3fbea;
+  margin: 0px;
+}
+.text-7 {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .right-container {
+    display: none;
+  }
+  .left-container {
+    width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .middle-container {
+    padding: 24px 20px 32px 20px;
+    /* width: calc(100vw - 40px); */
+  }
+}
+        }
+.theme-light {
+  --color-primary: #E3FBEA;
+  --color-secondary: #e3fbea;
+  --font-color-primary: #143e48;
+  --font-color-secondary: #333333;
+  --font-color-tertiary: #000000;
+  --font-color-quarternary: #363a57;
+}
+.theme-dark {
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --font-color-primary: #dbd5d5;
+  --font-color-secondary: #dbd5d5;
+  --font-color-tertiary: #dbd5d5;
+  --font-color-quarternary: #d3d9ff;
+}
+/* .btn-theme{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+} */
+
+
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header">
+        <img src="https://svgshare.com/i/nLt.svg" />
+      </header>
+      <div class="top-container" >
+        <div class="left-container">
+          <div class="text-container" >
+            <p class="text-small">Congratulations!</p>
+            <p class="text-medium">You are</p>
+            <p class="text-large" style = "color: #6db18a;">Waitlisted</p>
+          </div>
+        </div>
+        <div class="right-container">
+          <img src="https://svgshare.com/i/nME.svg" />
+        </div>
+      </div>
+      <div class="middle-container" >
+        <h1 class="text-1">It’s easy to use App! 🎉</h1>
+        <h2 class="text-2">Refer up to 3 friends every month. Get AED 10.</h2>
+        <p class="text-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit nisl, viverra potenti sem vel nam eros neque. Nulla viverra
+          sit feugiat volutpat in eros diam quam sed.
+        </p>
+        <div class="mid-inner-container">
+          <h3 class="text-4">Help everybody get debt-free with Vance</h3>
+          <div class="container">
+            <img src="https://svgshare.com/i/nMm.svg" />
+            <p class="text-5">Pay off cards up to 8x faster</p>
+          </div>
+          <div class="container">
+            <img src="https://svgshare.com/i/nNq.svg" />
+            <p class="text-5">Boost credit scores up to 60 points</p>
+          </div>
+          <div class="container">
+            <img src="https://svgshare.com/i/nLs.svg" />
+            <p class="text-5">Save up to AED 50/year on fees and charges</p>
+          </div>
+        </div>
+        <hr class="separator" />
+        <p class="text-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit nisl, viverra potenti sem vel nam eros neque. Nulla viverra
+          sit feugiat volutpat in eros diam quam sed.
+        </p>
+        <div class="btn-container">
+          <button class="btn-1">Get $96 off now</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <p class="text-6">Connect with Vance on social</p>
+        <div class="icon-container">
+          <img class="icon" src="https://svgshare.com/i/nMa.svg" />
+          <img class="icon" src="https://svgshare.com/i/nMn.svg" />
+          <img class="icon" src="https://svgshare.com/i/nMb.svg" />
+          <img class="icon" src="https://svgshare.com/i/nMo.svg" />
+        </div>
+        <p class="text-7">Not interested? <u><b style="cursor:pointer;">Unsubscribe</b></u> from this list</p>
+        <p class="text-8">Vance Techlabs Private Limited<br />Vance HQ, 1st Block Koramangala, Bengaluru, KA 560034</p>
+      </footer>
+    </div>
+      </body>
+</html>
